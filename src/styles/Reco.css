@@ -1,0 +1,69 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.border{
+    border: 1px solid black;
+}
+
+.container{
+    padding: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    flex-basis: calc(20% - 40px);
+    max-width: calc(20% - 40px);
+    background-color: #F9F8F8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book:hover{
+    cursor: pointer;
+}
+
+.book img{
+    padding: 20px;
+}
+
+.book span{
+    font-weight: bold;
+}
+
+.book .title{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.book div:nth-child(1) span{
+    font-family: "Marck Script", serif;
+    letter-spacing: 1px;
+    color: #2F9C95;
+}
+
+.book div:nth-child(4) span{
+    color: #171738;
+}
