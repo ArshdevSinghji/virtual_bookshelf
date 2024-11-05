@@ -32,8 +32,6 @@
     justify-content: space-between;
     margin: 10px;
     padding: 10px;
-    flex-basis: calc(20% - 40px);
-    max-width: calc(20% - 40px);
     background-color: #F9F8F8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -64,6 +62,9 @@
     color: #2F9C95;
 }
 
-.book div:nth-child(4) span{
+.book div:nth-child(3) span{
     color: #171738;
+    font-size:0.8rem;
+    text-decoration: underline;
+    text-decoration-color: #2F9C95;
 }

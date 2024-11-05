@@ -1,16 +1,21 @@
-import BookShelf from "./component/Bookshelf";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from "./pages/Nav";
 import Footer from "./pages/Footer";
-import Bestsellers from "./component/Bestsellers";
+import Book from "./pages/Book";
+import Home from "./pages/Home";
+import "./App.css";
 function App() {
   return (
+    <Router>
     <div>
       <Nav />
-      <BookShelf />
-      <Bestsellers />
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/book" element={<Book />} />
+      </Routes>
       <Footer />
     </div>
+    </Router>
   );
 }
 

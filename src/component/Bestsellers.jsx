@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import "../styles/Bestseller.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 
 const Bestsellers = () => {
   const [Bestsellers, setBestsellers] = useState([]);
   const [booksData, setBooksData] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const key = import.meta.env.VITE_NYT_API_KEY;
     const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${key}`;
@@ -39,6 +42,7 @@ const Bestsellers = () => {
         });
         const booksData = await Promise.all(books);
         setBooksData(booksData);
+        setLoading(false);
       } catch (err) {
         console.log(err);
         setBooksData([]);
@@ -52,7 +56,8 @@ const Bestsellers = () => {
       <div className="ny-title">
         <h1>Bestsellers</h1>
       </div>
-      <div className="bestSellers">
+      {loading ? (<div className="loading"><FontAwesomeIcon icon={faCircleNotch} spin/></div>) :
+      (<div className="bestSellers">
         {booksData.map((book, index) => (
           <div key={index} className="books">
             {book && (
@@ -73,7 +78,7 @@ const Bestsellers = () => {
             )}
           </div>
         ))}
-      </div>
+      </div>)}
     </div>
   );
 };
