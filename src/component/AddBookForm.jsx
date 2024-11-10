@@ -24,7 +24,7 @@ const AddBookForm = (props) => {
     }
 
     const key = import.meta.env.VITE_GOOGLE_API_KEY;
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${title}&key=${key}`;
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${title}&filter=free-ebooks&key=${key}`;
 
     async function fetchingData() {
       try {

@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import "../styles/Bestseller.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 const Bestsellers = () => {
   const [Bestsellers, setBestsellers] = useState([]);
   const [booksData, setBooksData] = useState([]);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const key = import.meta.env.VITE_NYT_API_KEY;
     const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${key}`;
@@ -59,24 +61,26 @@ const Bestsellers = () => {
       {loading ? (<div className="loading"><FontAwesomeIcon icon={faCircleNotch} spin/></div>) :
       (<div className="bestSellers">
         {booksData.map((book, index) => (
-          <div key={index} className="books">
-            {book && (
-              <div className="book-container">
-                <div className="book-thumbnail">
-                  <img
-                    src={book.volumeInfo.imageLinks?.thumbnail}
-                    alt={book.volumeInfo.title}
-                  />
-                  <div className="overlay">
-                    <div className="text">
-                      <h3>{book.volumeInfo.title}</h3>
-                      <p>{book.volumeInfo.authors?.join(", ")}</p>
+          <Link to="/book" key={index} state={{ book }}>
+            <div className="books">
+              {book && (
+                <div className="book-container">
+                  <div className="book-thumbnail">
+                    <img
+                      src={book.volumeInfo.imageLinks?.thumbnail}
+                      alt={book.volumeInfo.title}
+                    />
+                    <div className="overlay">
+                      <div className="text">
+                        <h3>{book.volumeInfo.title}</h3>
+                        <p>{book.volumeInfo.authors?.join(", ")}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          </Link>
         ))}
       </div>)}
     </div>
