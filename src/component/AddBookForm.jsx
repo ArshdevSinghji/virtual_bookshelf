@@ -6,7 +6,7 @@ const AddBookForm = (props) => {
   const { addBooks } = props;
 
   const [title, setTitle] = useState("");
-
+  const [isFetching, setIsFetching] = useState(false);
   const [bookData, setBookData] = useState([]);
 
   const handleBook = async (e) => {
@@ -16,10 +16,9 @@ const AddBookForm = (props) => {
   };
 
   useEffect(() => {
-    console.log("useEffect called");
-
     if (title.trim() === "") {
       setBookData([]);
+      setIsFetching(false);
       return;
     }
 
@@ -28,6 +27,7 @@ const AddBookForm = (props) => {
 
     async function fetchingData() {
       try {
+        setIsFetching(true);
         const response = await fetch(url);
         const data = await response.json();
 
@@ -40,6 +40,8 @@ const AddBookForm = (props) => {
       } catch (err) {
         console.log(err);
         setBookData([]);
+      } finally {
+        setIsFetching(false);
       }
     }
     fetchingData();
@@ -58,7 +60,7 @@ const AddBookForm = (props) => {
         </form>
       </div>
       <div>
-        <Recomendation bookData={bookData} />
+        <Recomendation bookData={bookData} isFetching={isFetching} />
       </div>
     </div>
   );

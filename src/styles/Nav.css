@@ -1,55 +1,98 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.login-container{
-    display: flex;
-    flex-flow: row-reverse;
-    gap: 10px;
-    padding: 10px;
+.contain {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
 }
 
-.login-container h4{
-    font-size: 0.8rem;
+.contain::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%) scale(0.8);
+  background-image: url("../assets/public/woman-8506738.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 250%;
 }
 
-.login-container div:hover{
-    cursor: pointer;
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
-.title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 20;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
-.title h1{
-    font-family: 'ITC Benguiat Std', sans-serif;
-    color: #000;                         
+.login-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-.name{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    padding-top: 75px;
+.login-container h4 {
+  font-size: 0.8rem;
 }
 
-.firstName{
-    font-size: 38px;
-    font-style: bold;
-    padding: 0;
-    margin: 0;
+.login-container div:nth-child(2) {
+  display: flex;
+  gap: 10px;
 }
 
-.secondName{
-    font-size: 22px;
-    padding: 0;
-    margin-top: -30px;
+.login-container div:nth-child(2) div:hover {
+  cursor: pointer;
 }
 
-.border{
-    border: 1px solid black;
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title h1 {
+  font-family: "ITC Benguiat Std", sans-serif;
+  color: #14452f;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  padding-top: 75px;
+}
+
+.firstName {
+  font-size: 38px;
+  font-style: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.secondName {
+  font-size: 22px;
+  padding: 0;
+  margin-top: -30px;
+}
+
+.border {
+  border: 1px solid black;
 }

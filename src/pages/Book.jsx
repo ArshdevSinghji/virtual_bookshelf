@@ -139,10 +139,6 @@ const Book = () => {
                 </div>
               )}
             </div>
-            <h3>Popular passages</h3>
-            <div className="popular-passage book-border">
-              <p>working...</p>
-            </div>
           </div>
           <div className="col2">
             <h3>Author</h3>

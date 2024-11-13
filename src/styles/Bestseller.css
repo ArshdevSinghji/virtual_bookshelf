@@ -1,81 +1,82 @@
-.ny-container{
-    display: flex;
-    flex-direction: column;
-    background-color:rgba(255, 224, 102, 0.1);
+.ny-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 224, 102, 0.1);
 }
 
-.loading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.ny-title{
-    padding: 20px;
-    background-color: #171738;
-    width: 25%;
-    text-decoration: underline;
-    text-decoration-color: #2F9C95;
+.ny-title {
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.ny-title h1{
-    color: white;
-    font-size: 1.3rem;
-    letter-spacing: 2px;
+.ny-title h1 {
+  font-size: 1.2rem;
 }
 
-.bestSellers{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 45px;
+.bestSellers {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 0;
 }
 
-.books{
-    position: relative;
-    width: 200px;
+.books {
+  position: relative;
+  width: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.book-container{
-    position: relative;
+.book-container {
+  position: relative;
 }
 
-.book-thumbnail{
-    position: relative;
-    width: 175px;
-    height: 200px;
-    overflow: hidden;
+.book-thumbnail {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  overflow: hidden;
 }
 
-.book-thumbnail img{
-    width:100%;
-    height: auto;
-    object-fit: cover;
+.book-thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.overlay{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-color: rgba(50, 103, 113, 0.7);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(50, 103, 113, 0.7);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.overlay:hover{
-    cursor: pointer;
-    background-color: #28464B;
-    transition: 0.5s;
+.overlay:hover {
+  cursor: pointer;
+  background-color: #18392b;
+  transition: 0.5s;
 }
 
-.border{
-    border: 2px solid black;
+.border {
+  border: 2px solid black;
 }

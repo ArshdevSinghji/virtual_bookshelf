@@ -1,94 +1,94 @@
 .footer {
-    color: #fff;
-    height: 70vh;
-    padding: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #272838;
+  color: #fff;
+  height: 70vh;
+  padding: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #1d2e28;
 }
 
-.footer-logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer li{
-    list-style-type: none;
+.footer li {
+  list-style-type: none;
 }
 
 .footer-title-logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-title h1 {
-    font-family: 'ITC Benguiat Std', sans-serif;
-    color: #fff;                         
+  font-family: "ITC Benguiat Std", sans-serif;
+  color: #fff;
 }
 
 .footer-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-firstName {
-    font-size: 38px;
-    font-style: bold;
-    padding: 0;
-    margin: 0;
+  font-size: 38px;
+  font-style: bold;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-secondName {
-    font-size: 22px;
-    padding: 0;
-    margin-top: -30px;
+  font-size: 22px;
+  padding: 0;
+  margin-top: -30px;
 }
 
 .logo img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
-.footer-list{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
-.footer-list-container{
-    display: flex;
-    justify-content: space-around;
-} 
-
-.footer-list-container ul li{
-    padding: 0 10px 10px 10px;
+.footer-list-container {
+  display: flex;
+  justify-content: space-around;
 }
 
-.footer-list-container ul li:hover{
-    text-decoration: underline;
-    cursor: pointer;
+.footer-list-container ul li {
+  padding: 0 10px 10px 10px;
 }
 
-.social{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 32px;
+.footer-list-container ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.social a{
-    margin: 0 0 0 17px;
+.social {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 32px;
 }
 
-.social a:hover{
-    color: #F3E9DC;
-    cursor: pointer;
+.social a {
+  margin: 0 0 0 17px;
 }
 
-.border{
-    border: 1px solid #000;
+.social a:hover {
+  color: #f3e9dc;
+  cursor: pointer;
+}
+
+.border {
+  border: 1px solid #000;
 }

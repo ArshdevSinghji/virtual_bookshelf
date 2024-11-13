@@ -1,0 +1,26 @@
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0a5c36;
+  padding: 20px;
+}
+
+.quote {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #fff;
+  width: 80%;
+}
+
+.quote-author {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  margin: 10px 0 0;
+}
