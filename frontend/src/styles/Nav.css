@@ -30,15 +30,20 @@
   width: 100%;
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 20;
-  background: white;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.menu {
+  position: fixed;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.menu div {
+  border-bottom: 1px solid black;
+}
+
+.no-text-decoration {
+  text-decoration: none;
+  color: inherit;
 }
 
 .login-container {

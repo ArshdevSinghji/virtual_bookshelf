@@ -89,18 +89,18 @@ const Book = () => {
                   <p>Published:</p>
                 </div>
                 <div>
-                  <p>{book.pageCount}</p>
+                  <p>{book.pageCount || "Not available"}</p>
                   <p>
                     {Array.isArray(book.publisher) && book.publisher.length > 0
                       ? book.publisher.join(",")
-                      : book.publisher || "unknown"}
+                      : book.publisher || "Not available"}
                   </p>
                   <p>
                     {book.authors && book.authors.length > 0
                       ? book.authors.join(",")
-                      : "unknown"}
+                      : "Not available"}
                   </p>
-                  <p>{book.publishedDate}</p>
+                  <p>{book.publishedDate || "Not available"}</p>
                 </div>
                 <div>
                   <p>Language:</p>
@@ -108,24 +108,24 @@ const Book = () => {
                   <p>Rating:</p>
                 </div>
                 <div>
-                  <p>{book.language}</p>
-                  <p>{book.maturityRating}</p>
-                  <p>{book.averageRating}</p>
+                  <p>{book.language || "Not available"}</p>
+                  <p>{book.maturityRating || "Not available"}</p>
+                  <p>{book.averageRating || "Not available"}</p>
                 </div>
               </div>
               <div className="description">
                 <div className="description-details">
-                  <p>
-                    {book.description
-                      ? book.description
-                      : "we are working on description..."}
-                  </p>
+                  <p>{showWiki.extract}</p>
                 </div>
               </div>
               {showMore ? (
                 <div>
                   <div className="wiki-data">
-                    <p>{showWiki.extract}</p>
+                    <p>
+                      {book.description
+                        ? book.description
+                        : "Description not available."}
+                    </p>
                   </div>
                   <div className="show-more" onClick={handleMore}>
                     <p>Show less</p>
@@ -146,15 +146,19 @@ const Book = () => {
               <div className="author-details book-border">
                 <div>
                   <div>
-                    <h4>{author.title}</h4>
-                    <p>{author.description}</p>
+                    <h4>{author.title || "Not available"}</h4>
+                    <p>{author.description || "Description not available."}</p>
                   </div>
                   <div>
-                    <img src={author.thumbnail?.source} alt={author.title} />
+                    {author.thumbnail?.source ? (
+                      <img src={author.thumbnail.source} alt={author.title} />
+                    ) : (
+                      <p>Image not available</p>
+                    )}
                   </div>
                 </div>
                 <div>
-                  <p>{author.extract}</p>
+                  <p>{author.extract || "No additional information found."}</p>
                 </div>
               </div>
             </div>
